@@ -98,9 +98,10 @@
   main {
     align-items: top;
     display: flex;
-    min-height: 100vh;
-    justify-content: space-between;
-    max-width: 1200px;
+    gap: 2rem;
+    justify-content: center;
     margin: 0 auto;
+    max-width: 1200px;
+    min-height: 100vh;
   }
 </style>

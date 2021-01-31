@@ -22,9 +22,13 @@
 
 <style>
   div {
+    --background-color: white;
     --border-color: grey;
+    --opacity: 1;
+    --scale: 1;
 
     align-items: center;
+    background-color: var(--background-color);
     border-color: var(--border-color);
     border-style: solid;
     border-width: 3px;
@@ -34,11 +38,16 @@
     height: 100px;
     justify-content: center;
     line-height: 1;
+    opacity: var(--opacity);
+    scale: var(--scale);
     user-select: none;
     width: 100px;
   }
 
   div.active {
-    --border-color: red;
+    --background-color: lightgrey;
+    --border-color: purple;
+    --opacity: 0.5;
+    --scale: 0.95;
   }
 </style>
