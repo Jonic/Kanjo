@@ -9,10 +9,14 @@
 
   const newKanji = () => {
     character = KanjiAll[Math.floor(Math.random() * KanjiAll.length)];
-    KanjiAll = KanjiAll.filter((item) => item !== character);
   };
 
   newKanji();
+
+  $: {
+    newKanji();
+    KanjiAll = KanjiAll.filter((item) => item !== character);
+  }
 </script>
 
 <svelte:window on:keydown={keyPressHandlder} />

@@ -7,10 +7,9 @@
 
   const handleClick = () => (active = !active);
 
-  const valueCheck = (_, character) => {
+  const valueCheck = () => {
     return {
-      update(character) {
-        console.log(character);
+      update() {
         active = false;
       },
     };
