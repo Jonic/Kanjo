@@ -5,8 +5,6 @@
   import Grid from "./Grid.svelte";
   import Menu from "./Menu.svelte";
 
-  document.title = "カンジョ！";
-
   let params = new URLSearchParams(window.location.search);
 
   let sizes = {
@@ -24,6 +22,7 @@
   let KanjiAll;
   let KanjiCount;
   let KanjiSet;
+  let title = "カンジョ！";
 
   const newKanjiSet = (KanjiAll, KanjiCount) => {
     const set = KanjiAll.slice();
@@ -74,8 +73,12 @@
   resetGame();
 </script>
 
+<svelte:head>
+  <title>{title}</title>
+</svelte:head>
+
 {#if initialized}
-  <h1>カンジョ！</h1>
+  <h1>{title}</h1>
 
   <Menu {caller} {resetGame} {setSize} {sizes} {toggleCaller} />
 

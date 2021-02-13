@@ -21,12 +21,10 @@
 
 <svelte:window on:keydown={keyPressHandlder} />
 
-<div on:click={newKanji}>
+<div>
   <strong>
     {#if character}
-      {character.kun_readings.join(" / ")}
-      /
-      {character.on_readings.join(" / ")}
+      {character.kanji}
     {:else}
       Game Over
     {/if}
